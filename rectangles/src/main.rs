@@ -1,17 +1,16 @@
 #[derive(Debug)]
 struct Rectangle {
     width: usize,
-    height: usize
+    height: usize,
 }
 
 impl Rectangle {
-
     fn area(&self) -> usize {
         &self.width * &self.height
     }
 
     fn can_hold(&self, other: &Rectangle) -> bool {
-        return self.height > other.height && self.width > other.width
+        return self.height > other.height && self.width > other.width;
     }
 
     fn square(size: usize) -> Rectangle {
@@ -20,10 +19,7 @@ impl Rectangle {
             height: size,
         }
     }
-
 }
-
-
 
 fn main() {
     let rect1 = Rectangle {
